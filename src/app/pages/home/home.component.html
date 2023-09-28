@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+
+<div class="content">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h2>Mi first Angular App</h2>
+      <hr>
+      <ng-container *ngFor="let p of products">
+        <ng-container *ngIf="imageLoaded[p.id]">
+          <app-product [product]="p"></app-product>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
+<app-footer></app-footer>
